@@ -52,3 +52,7 @@ def find_the_person_within_the_list(people_list, name):
     return None
 
 find_the_person_within_the_list(people_in_the_list, "Bárbara")
+
+# this case can generate a bug
+print("á" > "z") # true
+print("a" > "z") # false
