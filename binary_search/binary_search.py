@@ -1,23 +1,24 @@
-def binary_search(list_numbers, my_number) -> str:
+def binary_search(my_array, my_item):
+
     low = 0
-    high = len(list_numbers) - 1
+    high = len(my_array) - 1
 
     while low <= high:
+
         mid = (low + high) // 2
 
-        guess = list_numbers[mid]
+        guess = my_array[mid]
 
-        if guess == my_number:
-            return f"This is ur number {guess}! "
+        if guess == my_item:
+            return f"U found ur item: {my_item}"
 
-        if my_number < guess:
+        if guess > my_item:
             high = mid - 1
 
-        if guess < my_number:
+        if guess < my_item:
             low = mid + 1
 
-    return "Ur number was not found"
+    return "Ur item was not found"
 
-my_list_numbers = [ 3, 7, 12, 18, 23, 29, 34, 41, 56, 72]
-
-print(binary_search(my_list_numbers, 23))
+my_ordered_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(binary_search(my_ordered_list, 7))
