@@ -11,7 +11,6 @@ def selection_sort(arr):
             if arr[min_index] > arr[j]:
                 min_index = j
 
-        print(arr[i], arr[min_index])
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
     return arr
